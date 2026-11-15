@@ -1,0 +1,22 @@
+{
+  "name": "logistics-facet-backend",
+  "version": "1.0.0",
+  "description": "Backend server for the logistics faceted classification system.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "faceted-classification",
+    "logistics",
+    "api"
+  ],
+  "author": "QYJX-117",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mysql2": "^3.6.5",
+    "dotenv": "^16.4.5"
+  }
+}
