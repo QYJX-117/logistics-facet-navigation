@@ -4,6 +4,7 @@ const mysql = require('mysql2/promise');
 // 数据库连接配置（通过环境变量注入，不要把密码写入仓库）
 const dbConfig = {
   host: process.env.DB_HOST || 'localhost',
+  port: Number(process.env.DB_PORT) || 3306,
   user: process.env.DB_USER || 'root',
   password: process.env.DB_PASSWORD || '',
   database: process.env.DB_NAME || 'logistics_db'
@@ -17,6 +18,7 @@ async function initializeDatabase() {
         // 首先连接到 MySQL 服务器，但不指定数据库
         const connection = await mysql.createConnection({
             host: dbConfig.host,
+            port: dbConfig.port,
             user: dbConfig.user,
             password: dbConfig.password
         });
